@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseDomain = 'http://localhost:1337';
+const baseDomain = 'https://d-themes.com/vue/molla/server';
 console.log(window.location.hostname)
 
 export const customHeaders = {
