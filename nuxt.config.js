@@ -2,6 +2,7 @@ import ar from "./utilities/lang/ar.json" ;
 import en from "./utilities/lang/eng.json";
 
 export default {
+    target:"static",
     head: {
         titleTemplate: 'Capital Sooq',
         title: 'Capital Sooq',
