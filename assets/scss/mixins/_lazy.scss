@@ -1,3 +1,0 @@
-@mixin aspect-ratio($width, $height) {
-	padding-top: calc($height / $width) * 100%;
-}
