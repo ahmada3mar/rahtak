@@ -139,7 +139,6 @@
 </template>
 <script>
 import { mapGetters } from 'vuex';
-import Sticky from 'vue-sticky-directive';
 
 import PageHeader from '~/components/elements/PageHeader';
 import ShopListOne from '~/components/partial/shop/list/ShopListOne';
@@ -155,9 +154,6 @@ export default {
         ShopListOne,
         ShopSidebarOne,
         Pagination
-    },
-    directives: {
-        Sticky
     },
     data: function() {
         return {

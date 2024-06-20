@@ -4,7 +4,7 @@ import en from "./utilities/lang/eng.json";
 export default {
     head: {
         titleTemplate: 'Capital Sooq',
-        title: 'MCapital Sooq',
+        title: 'Capital Sooq',
         meta: [
             { charset: 'utf-8' },
             {
@@ -86,11 +86,11 @@ export default {
             {
                 rel: 'stylesheet',
                 href:
-                    'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700%7CPoppins:300,400,500,600,700',
-                defer: true
+                    'http://fonts.googleapis.com/earlyaccess/droidarabickufi.css',
             }
         ],
     },
+
     css: [
         '~/static/vendor/line-awesome/css/line-awesome.min.css',
         'swiper/dist/css/swiper.css',
@@ -98,7 +98,11 @@ export default {
         '~/static/css/bootstrap.min.css',
         '~/assets/scss/style.scss',
     ],
-
+    loading: {
+        color: 'blue',
+        height: '5px',
+        throttle:5
+      },
     plugins: [
         { src: '~/plugins/swiper.js', ssr: false },
         { src: '~/plugins/localStorage.js', ssr: false },
@@ -107,12 +111,27 @@ export default {
         { src: '~/plugins/lazyLoad.js', ssr: false },
         { src: '~/plugins/toastify.js', ssr: false },
         { src: '~/plugins/nouislider.js', ssr: false },
+        { src: '~/plugins/sticky.js', ssr: false },
+        { src: '~/plugins/dir.js', ssr: false },
     ],
 
-    modules: [ '@nuxtjs/axios', '@nuxtjs/i18n' ],
+    modules: [ '@nuxtjs/axios', '@nuxtjs/i18n' , 'google-fonts' ],
     i18n: {
-        locales: ['en', 'ar'],
-        defaultLocale: 'en',
+        locales: [
+            {
+              code: 'en',
+              file: 'en.json',
+              dir: 'ltr',
+              name: 'English',
+            },
+            {
+              code: 'ar',
+              file: 'ar.json',
+              dir: 'rtl', 
+              name: 'عربي',
+            },
+          ],
+        defaultLocale: 'ar',
         vueI18n: {
           fallbackLocale: 'en',
           messages: {
@@ -127,22 +146,25 @@ export default {
         linkActiveClass: 'link-active',
         linkExactActiveClass: 'active'
     },
+    // serverMiddleware: ['~/server-middleware/index.js'],
 
     pageTransition: 'page',
 
     build: {
-        publicPath: 'https://demo-app.dev'
+        // publicPath: '/sooq-dist/assets'
     },
 
     generate: {
+        // dir: '../../Sooq/public/app',
         subFolders: false,
-        fallback: '404.html'
+        fallback: '404.html',
+        ignore:['.htaccess']
     },
 
     ssr: false,
 
     server: {
-        port: 4000,
+        port: 5000,
         host: 'localhost'
     }
 };

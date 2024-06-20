@@ -4,5 +4,9 @@ export default function ( { $axios, redirect } ) {
         if ( code === 400 ) {
             redirect( '/pages/404' );
         }
+
+        if(code == 406){
+            redirect('/pages/coming-soon')
+        }
     } );
 }

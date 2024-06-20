@@ -2,7 +2,7 @@
     <nav class="main-nav">
         <ul class="menu">
             <li class="megamenu-container" :class="{ active: current == '/' }">
-                <nuxt-link :to="localePath('/')" class="sf-with-ul" >Home</nuxt-link>
+                <nuxt-link :to="localePath('/')" class="sf-with-ul" >{{ $t("home") }}</nuxt-link>
             </li>
             <li :class="{ active: current == 'shop' }">
                 <nuxt-link
@@ -11,7 +11,7 @@
                     >Shop</nuxt-link>
             </li>
             <li :class="current == 'market' ? 'active' : '' ">
-                <nuxt-link :to="localePath('/shop/market')" >CATEGORIES</nuxt-link>
+                <nuxt-link :to="localePath('/shop/market')" >{{ $t("catagories") }}</nuxt-link>
 
                 <ul>
                     <li class="ml-5 mb-1">Popular Categories</li>
@@ -115,13 +115,13 @@
                 <nuxt-link
                 to="/"
                     class="sf-with-ul"
-                    >Merchants</nuxt-link>
+                    >{{ $t("partners")}}</nuxt-link>
             </li>
             <li :class="{ active: current == 'shop' }">
                 <nuxt-link
                 to="/"
                     class="sf-with-ul"
-                    >FAQs</nuxt-link>
+                    >{{ $t("about") }}</nuxt-link>
             </li>
             <!-- <li :class="{ active: current == 'blog' }">
                 <nuxt-link :to="localePath('/blog/classic')" class="sf-with-ul"

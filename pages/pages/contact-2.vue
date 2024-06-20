@@ -15,7 +15,7 @@
         </nav>
 
         <div class="page-content">
-            <div id="map")' class="mb-5">
+            <div id="map" class="mb-5">
                 <gmap-map
                 :center="{lat:10, lng:10}"
                 :zoom="7"
@@ -119,7 +119,7 @@
                         <form action="#" class="contact-form mb-2">
                             <div class="row">
                                 <div class="col-sm-4">
-                                    <label for="cname")' class="sr-only">Name</label>
+                                    <label for="cname" class="sr-only">Name</label>
                                     <input
                                         type="text"
                                         class="form-control"
@@ -130,7 +130,7 @@
                                 </div>
 
                                 <div class="col-sm-4">
-                                    <label for="cemail")' class="sr-only">Name</label>
+                                    <label for="cemail" class="sr-only">Name</label>
                                     <input
                                         type="email"
                                         class="form-control"
@@ -141,7 +141,7 @@
                                 </div>
 
                                 <div class="col-sm-4">
-                                    <label for="cphone")' class="sr-only">Phone</label>
+                                    <label for="cphone" class="sr-only">Phone</label>
                                     <input
                                         type="tel"
                                         class="form-control"
@@ -151,7 +151,7 @@
                                 </div>
                             </div>
 
-                            <label for="csubject")' class="sr-only">Subject</label>
+                            <label for="csubject" class="sr-only">Subject</label>
                             <input
                                 type="text"
                                 class="form-control"
@@ -159,7 +159,7 @@
                                 placeholder="Subject"
                             />
 
-                            <label for="cmessage")' class="sr-only">Message</label>
+                            <label for="cmessage" class="sr-only">Message</label>
                             <textarea
                                 class="form-control"
                                 cols="30"

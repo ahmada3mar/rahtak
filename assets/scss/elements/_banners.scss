@@ -3,6 +3,21 @@
 	margin-bottom: 1.9rem;
 }
 
+:dir(rtl){
+	.icon-long-arrow-right{
+
+		&::before{
+			transform: rotate(180deg) !important;
+		}
+	}
+	.icon-long-arrow-left{
+
+		&::before{
+			transform: rotate(180deg) !important;
+		}
+	}
+}
+
 .banner {
 	display: block;
 	position: relative;
@@ -217,6 +232,16 @@
 	}
 }
 
+.icon-long-arrow-right{
+	margin-left: 5px ;
+	margin-right: 5px ;
+}
+.icon-long-arrow-left{
+	margin-left: 5px ;
+	margin-right: 5px ;
+}
+
+
 .btn.banner-link {
 	font-size: 1.4rem;
 	line-height: 1;
@@ -226,8 +251,8 @@
 	text-decoration: none !important;
 
 	i {
-		margin-right: 0;
-		margin-left: 0;
+		margin-left: 5px ;
+		margin-right: 5px ;
 
 		&:first-child {
 			margin-right: 0;

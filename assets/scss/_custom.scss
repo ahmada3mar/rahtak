@@ -60,6 +60,7 @@ $secondary-color: #e3987e;
 		letter-spacing: 0;
 		color: #222;
 		margin-left: .8rem;
+		margin-right: 0.8rem;
 	}
 
 	.header-bottom {
@@ -89,12 +90,8 @@ $secondary-color: #e3987e;
 		    color: #666;
 		}
 	}
-	.header-center {
-		margin-right: 10rem;
-	}
-	.header-right {
-		margin-left: 0;
-	}	
+
+
 
 	.container-fluid .header-center {
 		margin-left: 9rem;

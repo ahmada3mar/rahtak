@@ -10,7 +10,7 @@
                     <li class="breadcrumb-item">
                         <nuxt-link :to='localePath("/shop/sidebar/list")'>Shop</nuxt-link>
                     </li>
-                    <li class="breadcrumb-item active">Checkout</li>
+                    <li class="breadcrumb-item active">{{ $t('home') }}</li>
                 </ol>
             </div>
         </nav>

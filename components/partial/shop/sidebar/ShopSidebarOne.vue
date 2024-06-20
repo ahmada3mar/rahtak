@@ -226,9 +226,11 @@ export default {
         }
     },
     created: function() {
-        document
-                .querySelector('body')
-                .classList.remove('sidebar-filter-active');
+        if (process.client){
+            document
+            .querySelector('body')
+            .classList.remove('sidebar-filter-active');
+        }
 
         if (this.$route.query.minPrice && this.$route.query.maxPrice) {
             this.loaded = false;

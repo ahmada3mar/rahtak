@@ -10,7 +10,7 @@
                                 :style="{ backgroundImage: `url(./images/home/banners/snow.png)`}"
                             >
                                 <div class="container container intro-content text-left">
-                                    <h3 class="intro-subtitle">Happy New Year</h3>
+                                    <h3 class="intro-subtitle">{{ $t("home") }}</h3>
 
                                     <h1 class="intro-title">
                                         New year
@@ -536,7 +536,7 @@ export default {
     methods: {
         getProducts: async function() {
             this.loaded = false;
-            await Repository.get(`${baseUrl}/demo8`)
+            await Repository.get(`/demo8`)
                 .then(response => {
                     this.products = response.data.products;
                     this.topProducts = attrFilter(this.products, 'top');

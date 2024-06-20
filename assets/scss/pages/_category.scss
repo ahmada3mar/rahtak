@@ -9,7 +9,7 @@
 	line-height: 1.5;
 	margin-top: 0;
 	margin-bottom: 2rem;
-	@include clearfix();
+	justify-content: space-between;
 
 	.select-custom {
 		margin-bottom: 0;
@@ -60,6 +60,7 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+	gap: 5px;
 }
 
 .toolbox-center {
@@ -72,11 +73,7 @@
 	flex-direction: column;
 }
 
-@include mq('768px') {
-	.toolbox-right {
-		margin-left: auto;
-	}
-}
+
 
 .toolbox-info {
 	color: #ccc;
@@ -89,6 +86,7 @@
 .toolbox-sort {
 	display: flex;
 	align-items: center;
+	gap: 5px;
 
 	label {
 		margin-right: 1.6rem;
@@ -193,6 +191,7 @@
 		line-height: 1.15;
 		letter-spacing: -.01em;
 		margin-bottom: .7rem;
+		text-align: start;
 	}
 
 	.custom-control {
@@ -249,7 +248,6 @@
  		margin-left: auto;
  	}
 }
-
 .widget-collapsible {
 	.widget-title {
 		a {
@@ -257,7 +255,8 @@
 			display: block;
 			color: inherit;
 			text-decoration: none;
-			padding-right: 3rem;
+			text-align: start;
+
 	
 			&:after {
 				color: $dark-text;
@@ -293,6 +292,34 @@
 		padding-bottom: 2rem;
 	}
 }
+
+
+:dir(rtl){
+
+	.widget-collapsible {
+		*{
+			text-align: right !important;
+		}
+		.widget-title {
+			a {
+				&:after {
+					left: 0.6rem;
+					right: unset !important;
+				}
+			}
+		}
+	}
+	.filter-item{
+		padding-right: unset !important;
+	}
+	.item-count{
+		left: 0px;
+		right: unset !important;
+	}
+	
+
+}
+
 
 .filter-item {
 	position: relative;

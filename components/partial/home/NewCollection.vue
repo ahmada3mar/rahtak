@@ -66,7 +66,7 @@
             </div>
         </div>
         <div class="more-container text-center mt-3 mb-3">
-            <nuxt-link :to='localePath("/shop/sidebar/4cols")' class="btn btn-outline-dark-3 btn-more">
+            <nuxt-link to="/shop/sidebar/4cols" class="btn btn-outline-dark-3 btn-more">
                 <span>View More</span>
                 <i class="icon-long-arrow-right"></i>
             </nuxt-link>
