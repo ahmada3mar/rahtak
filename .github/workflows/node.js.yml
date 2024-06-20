@@ -25,9 +25,6 @@ jobs:
       - name: Build
         run: npm run generate # The build command of your project
 
-      - name: Create branch
-        run: git checkout -b dist # The build command of your project
-
 
     
       - name: Push
