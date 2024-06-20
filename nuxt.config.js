@@ -4,8 +4,8 @@ import en from "./utilities/lang/eng.json";
 export default {
     target:"static",
     head: {
-        titleTemplate: 'Capital Sooq',
-        title: 'Capital Sooq',
+        titleTemplate: 'Rahtak E-payment',
+        title: 'Rahtak E-payment',
         meta: [
             { charset: 'utf-8' },
             {
@@ -16,7 +16,7 @@ export default {
                 hid: 'description',
                 name: 'description',
                 content:
-                    'Capital Sooq desc'
+                    'Rahtak E-payment desc'
             },
             {
                 name: 'author',
@@ -24,15 +24,15 @@ export default {
             },
             {
                 name: 'keywords',
-                content: 'Capital Sooq'
+                content: 'Rahtak E-payment'
             },
             {
-                name: 'Capital Sooq',
-                content: 'Capital Sooq'
+                name: 'Rahtak E-payment',
+                content: 'Rahtak E-payment'
             },
             {
                 name: 'application-name',
-                content: 'Capital Sooq',
+                content: 'Rahtak E-payment',
             },
             {
                 name: 'msapplication-TileColor',
@@ -87,7 +87,7 @@ export default {
             {
                 rel: 'stylesheet',
                 href:
-                    'http://fonts.googleapis.com/earlyaccess/droidarabickufi.css',
+                    'https://fonts.googleapis.com/earlyaccess/droidarabickufi.css',
             }
         ],
     },
