@@ -250,7 +250,7 @@
                     <div class="banner banner-overlay">
                         <nuxt-link :to='localePath("/shop/sidebar/3cols?category=women")'>
                             <img
-                                v-lazy="'./images/banners/istockphoto-1143919019-612x612.jpg'"
+                                v-lazy="'./images/banners/steam.jpg'"
                                 width="575"
                                 height="300"
                                 alt="Banner"
@@ -258,12 +258,12 @@
                         </nuxt-link>
 
                         <div class="banner-content">
-                            <h4 class="banner-subtitle">
-                                <a href="javascript:;">New Arrivals</a>
+                            <h4 class="banner-subtitle text-white">
+                                <a href="javascript:;">Don't miss up</a>
                             </h4>
 
-                            <h3 class="banner-title">
-                                <a href="javascript:;">furniture</a>
+                            <h3 class="banner-title text-primary"">
+                                <a href="javascript:;">Steam store</a>
                             </h3>
 
                             <nuxt-link
@@ -289,8 +289,8 @@
                         </nuxt-link>
 
                         <div class="banner-content">
-                            <h4 class="banner-subtitle">
-                                <a href="javascript:;">New Arrivals</a>
+                            <h4 class="banner-subtitle text-white">
+                                <a href="javascript:;">Don't miss up</a>
                             </h4>
 
                             <h3 class="banner-title text-primary">
@@ -311,20 +311,20 @@
                     <div class="banner banner-overlay">
                         <nuxt-link :to='localePath("/shop/sidebar/3cols?category=women")'>
                             <img
-                                v-lazy="'./images/banners/labtops.png'"
-                                width="575"
+                            v-lazy="'./images/banners/osn.jpg'"
+                            width="575"
                                 height="300"
                                 alt="Banner"
                             />
                         </nuxt-link>
 
                         <div class="banner-content">
-                            <h4 class="banner-subtitle">
-                                <a href="javascript:;">New Arrivals</a>
+                            <h4 class="banner-subtitle text-white">
+                                <a href="javascript:;">Don't miss up</a>
                             </h4>
 
-                            <h3 class="banner-title">
-                                <a href="javascript:;">Laptops & Computers</a>
+                            <h3 class="banner-title text-primary">
+                                <a href="javascript:;">OSN plus</a>
                             </h3>
 
                             <nuxt-link
@@ -342,7 +342,7 @@
                     <div class="banner banner-overlay">
                         <nuxt-link :to='localePath("/shop/sidebar/3cols?category=men")'>
                             <img
-                                v-lazy="'./images/banners/acce.png'"
+                                v-lazy="'./images/banners/jawwy.jpg'"
                                 width="575"
                                 height="300"
                                 alt="Banner"
@@ -350,12 +350,12 @@
                         </nuxt-link>
 
                         <div class="banner-content">
-                            <h4 class="banner-subtitle">
-                                <a href="javascript:;">New Arrivals</a>
+                            <h4 class="banner-subtitle text-white">
+                                <a href="javascript:;">Don't miss up</a>
                             </h4>
 
-                            <h3 class="banner-title">
-                                <a href="javascript:;">Accessories</a>
+                            <h3 class="banner-title text-primary">
+                                <a href="javascript:;">Jawwy TV</a>
                             </h3>
 
                             <nuxt-link

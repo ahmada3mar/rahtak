@@ -391,31 +391,55 @@ export const homeData = {
     brands: [
         {
             "name": "brand",
-            "image": "./images/brands/bavin.png",
+            "image": "./images/brands/pubg.png",
             "width": 100,
             "height": 23
         },
         {
             "name": "brand",
-            "image": "./images/brands/miqaa.png",
+            "image": "./images/brands/freefire.png",
             "width": 100,
             "height": 23
         },
         {
             "name": "brand",
-            "image": "./images/brands/majestic.png",
+            "image": "./images/brands/state.png",
             "width": 100,
             "height": 23
         },
         {
             "name": "brand",
-            "image": "./images/brands/eufy.png",
+            "image": "./images/brands/apex.png",
             "width": 100,
             "height": 23
         },
         {
             "name": "brand",
-            "image": "./images/brands/bein.png",
+            "image": "./images/brands/kingdom.png",
+            "width": 100,
+            "height": 23
+        },
+        {
+            "name": "brand",
+            "image": "./images/brands/jawaker.png",
+            "width": 100,
+            "height": 23
+        },
+        {
+            "name": "brand",
+            "image": "./images/brands/osn.png",
+            "width": 100,
+            "height": 23
+        },
+        {
+            "name": "brand",
+            "image": "./images/brands/shahid.png",
+            "width": 100,
+            "height": 23
+        },
+        {
+            "name": "brand",
+            "image": "./images/brands/netflex.png",
             "width": 100,
             "height": 23
         },
