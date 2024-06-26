@@ -7,29 +7,29 @@
                         <div class="swiper-slide">
                             <div
                                 class="intro-slide"
-                                :style="{ backgroundImage: `url(./images/home/banners/snow.png)`}"
+                                :style="{ backgroundImage: `url(./images/home/banners/home-card.webp)`,
+                                    backgroundPosition: 'right',
+                                    backgroundRepeat: 'no-repeat',
+                                    backgroundSize: 'contain',
+                                    backgroundColor:'#e1e1e1'
+                                    
+                                }
+                                "
                             >
-                                <div class="container container intro-content text-left">
-                                    <h3 class="intro-subtitle">{{ $t("home") }}</h3>
-
+                                <div class="container container intro-content">
                                     <h1 class="intro-title">
-                                        New year
-                                        <br />
-                                        <strong>sale</strong>
+                                        {{ $t("rahtak") }}
+                                        <br/>
+                                        <strong>{{ $t("for_cards") }}</strong>
                                     </h1>
 
-                                    <h3 class="intro-subtitle">Up to 50% off</h3>
+                                    <h3 class="intro-subtitle">{{ $t("first_store") }}</h3>
 
                                     <nuxt-link :to='localePath("/shop/sidebar/list")' class="btn">
                                         <span>Shop Now</span>
                                         <i class="icon-long-arrow-right"></i>
                                     </nuxt-link>
-                                    <img
-                                    class="bg-transparent"
-                                    :src="'./images/banners/computer.png'"
-                                    width="768"
-                                    height="1103"
-                                />
+
                                 </div>
 
                             </div>
@@ -70,14 +70,14 @@
         </div>
 
         <div class="pt-2 pb-2">
-            <div class="container brands">
+            <div class="container brands mt-5 ">
                 <div class="banner-group">
                     <div class="row">
-                        <div class="col-sm-6 col-lg-4">
+                        <div class="col-sm-6 col-lg-4 px-4">
                             <div class="banner banner-overlay">
                                 <nuxt-link :to='localePath("/shop/sidebar/3cols")'>
                                     <img
-                                        v-lazy="'./images/home/banners/mobiles.png'"
+                                        v-lazy="'./images/category/sim2.webp'"
                                         alt="Banner"
                                         width="376"
                                         height="470"
@@ -85,53 +85,51 @@
                                 </nuxt-link>
 
                                 <div class="banner-content">
-                                    <h4 class="banner-subtitle">
-                                        <a href="javascript:;">5G Mobiles</a>
-                                    </h4>
-
                                     <h3 class="banner-title">
                                         <a href="javascript:;">
                                             <strong>
-                                                Nova 2023
-                                            </strong>
-                                            <br />up to 60% off
-                                        </a>
-                                    </h3>
-
-                                    <nuxt-link
-                                        to="/shop/sidebar/list"
-                                        class="btn btn-outline-white banner-link"
-                                    >
-                                        Shop Now
-                                        <i class="icon-long-arrow-right"></i>
-                                    </nuxt-link>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-lg-4">
-                            <div class="banner banner-overlay">
-                                <nuxt-link :to='localePath("/shop/sidebar/3cols")'>
-                                    <img
-                                        :src="'./images/home/banners/cameras.png'"
-                                        alt="Banner"
-                                        width="376"
-                                        height="470"
-                                    />
-                                </nuxt-link>
-
-                                <div class="banner-content">
-                                    <h4 class="banner-subtitle">
-                                        <a href="javascript:;">CCTV</a>
-                                    </h4>
-
-                                    <h3 class="banner-title">
-                                        <a href="javascript:;">
-                                            <strong>
-                                                IP Camera
-                                                <br />Wireless
+                                                {{$t("telecom")}}
                                             </strong>
                                             <br />
+                                            <small style="color: white ;">{{$t("lowest_price")}}</small>
+
+                                            
+                                        </a>
+                                    </h3>
+
+                                    <nuxt-link
+                                        to="/shop/sidebar/list"
+                                        class="btn btn-outline-white banner-link"
+                                    >
+                                    {{$t("shop_now")}}
+                                        <i class="icon-long-arrow-right"></i>
+                                    </nuxt-link>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-4 px-4">
+                            <div class="banner banner-overlay">
+                                <nuxt-link :to='localePath("/shop/sidebar/3cols")'>
+                                    <img
+                                         v-lazy="'./images/category/games.webp'"
+                                        alt="Banner"
+                                        width="376"
+                                        height="470"
+                                    />
+                                </nuxt-link>
+
+                                <div class="banner-content">
+                                    <h3 class="banner-title">
+                                        <a  href="javascript:;">
+                                            <strong>
+                                                Games cards
+                                                
+                                                </strong>
+                                                <br />
+                                                <small style="color: white ;">For all platforms</small>
+
+                                                
                                         </a>
                                     </h3>
 
@@ -146,11 +144,11 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-6 col-lg-4 d-none d-lg-block">
+                        <div class="col-sm-6 col-lg-4 px-4 d-none d-lg-block">
                             <div class="banner banner-overlay">
                                 <nuxt-link :to='localePath("/shop/sidebar/3cols")'>
                                     <img
-                                        v-lazy="'./images/home/banners/acc.png'"
+                                         v-lazy="'./images/category/stores.webp'"
                                         alt="Banner"
                                         width="376"
                                         height="470"
@@ -158,16 +156,14 @@
                                 </nuxt-link>
 
                                 <div class="banner-content">
-                                    <h4 class="banner-subtitle">
-                                        <a href="javascript:;">This week we love...</a>
-                                    </h4>
-
                                     <h3 class="banner-title">
                                         <a href="javascript:;">
                                             <strong>
-                                                Accessories
+                                                Stores
                                             </strong>
-                                            <br />from 6.99 JOD
+                                            <br />
+                                            <small style="color: white ;">PC & Mobile</small>
+                                            
                                         </a>
                                     </h3>
 
@@ -226,7 +222,7 @@
             <div class="sponsor"></div>
             <a href="javascript:;">
                 <img
-                    :src="'./images/banners/Sponsorship-banner.png'"
+                    :src="'./images/banners/freefirebanner.jpg'"
                     width="1920"
                     height="420"
                     alt="Banner"
@@ -234,17 +230,14 @@
             </a>
             <div class="banner banner-big d-md-block">
                 <div class="banner-content text-center">
-                    <h4 class="banner-subtitle text-white">Best Seller</h4>
+                    <h4 class="banner-subtitle text-white">Best Selling</h4>
 
-                    <h3 class="banner-title text-white">Merchant</h3>
+                    <h3 class="banner-title text-white">Free Fire</h3>
 
-                    <p class="d-none d-lg-block text-white">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                        <br />Donec odio. Quisque volutpat mattis eros.
-                    </p>
+                 <h5 class="text-white">Best Price of free fire diamonds in one place</h5>
 
                     <nuxt-link :to='localePath("/shop/sidebar/4cols")' class="btn btn-primary-white">
-                        <span>Whats selling?</span>
+                        <span>{{ $t("shop_now") }}</span>
                         <i class="icon-long-arrow-right"></i>
                     </nuxt-link>
                 </div>
@@ -300,8 +293,8 @@
                                 <a href="javascript:;">New Arrivals</a>
                             </h4>
 
-                            <h3 class="banner-title">
-                                <a href="javascript:;">Clothing</a>
+                            <h3 class="banner-title text-primary">
+                                <a href="javascript:;">PlayStation Store</a>
                             </h3>
 
                             <nuxt-link

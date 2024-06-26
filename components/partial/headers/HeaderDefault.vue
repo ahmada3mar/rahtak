@@ -12,10 +12,9 @@
                         <nuxt-link :to='localePath("/")' class="logo">
                             <img
                                 v-lazy="'./images/home/logo.png'"
-                                class="bg-white"
-                                alt="Molla Logo"
-                                width="82"
-                                height="22"
+                                alt="rahtak Logo"
+                                height="45"
+                                style="height: 45px; border-radius: 5px !important;"
                             />
                         </nuxt-link>
                     </div>
