@@ -26,7 +26,7 @@
                                     <h3 class="intro-subtitle">{{ $t("first_store") }}</h3>
 
                                     <nuxt-link :to='localePath("/shop/sidebar/list")' class="btn">
-                                        <span>Shop Now</span>
+                                        <span> {{ $t("shop_now") }}</span>
                                         <i class="icon-long-arrow-right"></i>
                                     </nuxt-link>
 
@@ -49,7 +49,7 @@
                                     </h1>
 
                                     <nuxt-link :to='localePath("/shop/sidebar/list")' class="btn">
-                                        <span>Shop Now</span>
+                                        <span> {{ $t("shop_now") }}</span>
                                         <i class="icon-long-arrow-right"></i>
                                     </nuxt-link>
                                 </div>
@@ -92,8 +92,6 @@
                                             </strong>
                                             <br />
                                             <small style="color: white ;">{{$t("lowest_price")}}</small>
-
-                                            
                                         </a>
                                     </h3>
 
@@ -123,11 +121,11 @@
                                     <h3 class="banner-title">
                                         <a  href="javascript:;">
                                             <strong>
-                                                Games cards
+                                                {{ $t("game_cards") }}
                                                 
                                                 </strong>
                                                 <br />
-                                                <small style="color: white ;">For all platforms</small>
+                                                <small style="color: white ;"> {{ $t("all_platforms") }}</small>
 
                                                 
                                         </a>
@@ -137,7 +135,7 @@
                                         to="/shop/sidebar/list"
                                         class="btn btn-outline-white banner-link"
                                     >
-                                        Shop Now
+                                    {{ $t("shop_now") }}
                                         <i class="icon-long-arrow-right"></i>
                                     </nuxt-link>
                                 </div>
@@ -159,10 +157,10 @@
                                     <h3 class="banner-title">
                                         <a href="javascript:;">
                                             <strong>
-                                                Stores
+                                                {{ $t("stores") }}
                                             </strong>
                                             <br />
-                                            <small style="color: white ;">PC & Mobile</small>
+                                            <small style="color: white ;"> {{ $t("pc_mobile") }}</small>
                                             
                                         </a>
                                     </h3>
@@ -171,7 +169,7 @@
                                         to="/shop/sidebar/list"
                                         class="btn btn-outline-white banner-link"
                                     >
-                                        Shop Now
+                                    {{ $t("shop_now") }}
                                         <i class="icon-long-arrow-right"></i>
                                     </nuxt-link>
                                 </div>
@@ -230,11 +228,11 @@
             </a>
             <div class="banner banner-big d-md-block">
                 <div class="banner-content text-center">
-                    <h4 class="banner-subtitle text-white">Best Selling</h4>
+                    <h4 class="banner-subtitle text-white"> {{ $t("best_selling") }}</h4>
 
-                    <h3 class="banner-title text-white">Free Fire</h3>
+                    <h3 class="banner-title text-white"> {{ $t("free_fire") }}</h3>
 
-                 <h5 class="text-white">Best Price of free fire diamonds in one place</h5>
+                 <h5 class="my-5 text-white"> {{ $t("best_free") }}</h5>
 
                     <nuxt-link :to='localePath("/shop/sidebar/4cols")' class="btn btn-primary-white">
                         <span>{{ $t("shop_now") }}</span>
@@ -259,18 +257,18 @@
 
                         <div class="banner-content">
                             <h4 class="banner-subtitle text-white">
-                                <a href="javascript:;">Don't miss up</a>
+                                <a href="javascript:;"> {{ $t("dont_miss") }}</a>
                             </h4>
 
                             <h3 class="banner-title text-primary"">
-                                <a href="javascript:;">Steam store</a>
+                                <a href="javascript:;"> {{ $t("steam_store") }}</a>
                             </h3>
 
                             <nuxt-link
                                 to="/shop/sidebar/3cols?category=women"
                                 class="btn btn-outline-white banner-link"
                             >
-                                Shop Now
+                                 {{ $t("shop_now") }}
                                 <i class="icon-long-arrow-right"></i>
                             </nuxt-link>
                         </div>
@@ -290,18 +288,18 @@
 
                         <div class="banner-content">
                             <h4 class="banner-subtitle text-white">
-                                <a href="javascript:;">Don't miss up</a>
+                                <a href="javascript:;"> {{ $t("dont_miss") }}</a>
                             </h4>
 
                             <h3 class="banner-title text-primary">
-                                <a href="javascript:;">PlayStation Store</a>
+                                <a href="javascript:;">{{ $t("playstation_store") }}</a>
                             </h3>
 
                             <nuxt-link
                                 to="/shop/sidebar/3cols?category=men"
                                 class="btn btn-outline-white banner-link"
                             >
-                                Shop Now
+                                 {{ $t("shop_now") }}
                                 <i class="icon-long-arrow-right"></i>
                             </nuxt-link>
                         </div>
@@ -320,18 +318,18 @@
 
                         <div class="banner-content">
                             <h4 class="banner-subtitle text-white">
-                                <a href="javascript:;">Don't miss up</a>
+                                <a href="javascript:;"> {{ $t("dont_miss") }}</a>
                             </h4>
 
                             <h3 class="banner-title text-primary">
-                                <a href="javascript:;">OSN plus</a>
+                                <a href="javascript:;">{{ $t("osn_plus") }}</a>
                             </h3>
 
                             <nuxt-link
                                 to="/shop/sidebar/3cols?category=women"
                                 class="btn btn-outline-white banner-link"
                             >
-                                Shop Now
+                                 {{ $t("shop_now") }}
                                 <i class="icon-long-arrow-right"></i>
                             </nuxt-link>
                         </div>
@@ -351,18 +349,18 @@
 
                         <div class="banner-content">
                             <h4 class="banner-subtitle text-white">
-                                <a href="javascript:;">Don't miss up</a>
+                                <a href="javascript:;"> {{ $t("dont_miss") }}</a>
                             </h4>
 
                             <h3 class="banner-title text-primary">
-                                <a href="javascript:;">Jawwy TV</a>
+                                <a href="javascript:;">{{ $t("jawwy_tv") }}</a>
                             </h3>
 
                             <nuxt-link
                                 to="/shop/sidebar/3cols?category=men"
                                 class="btn btn-outline-white banner-link"
                             >
-                                Shop Now
+                                 {{ $t("shop_now") }}
                                 <i class="icon-long-arrow-right"></i>
                             </nuxt-link>
                         </div>
@@ -385,9 +383,9 @@
                             <i class="icon-rocket"></i>
                         </span>
                         <div class="icon-box-content">
-                            <h3 class="icon-box-title">Payment & Delivery</h3>
+                            <h3 class="icon-box-title">{{ $t("secure_payment") }}</h3>
 
-                            <p>Free shipping for orders over $50</p>
+                            <p class="my-3">{{ $t("transaction_secure") }}</p>
                         </div>
                     </div>
                 </div>
@@ -398,9 +396,9 @@
                             <i class="icon-rotate-left"></i>
                         </span>
                         <div class="icon-box-content">
-                            <h3 class="icon-box-title">Return & Refund</h3>
+                            <h3 class="icon-box-title">{{ $t("instant") }}</h3>
 
-                            <p>Free 100% money back guarantee</p>
+                            <p class="my-3">{{ $t("instant_card") }}</p>
                         </div>
                     </div>
                 </div>
@@ -411,9 +409,9 @@
                             <i class="icon-life-ring"></i>
                         </span>
                         <div class="icon-box-content">
-                            <h3 class="icon-box-title">Quality Support</h3>
+                            <h3 class="icon-box-title">{{ $t("qa") }}</h3>
 
-                            <p>Alway online feedback 24/7</p>
+                            <p class="my-3">{{ $t("qa_time") }}</p>
                         </div>
                     </div>
                 </div>
@@ -453,6 +451,7 @@ export default {
             blogs: [],
             carouselSetting1: {
                 ...carouselSettingSingle,
+                autoplay:{ delay: 4000, disableOnInteraction: true },
                 pagination: {
                     el: '.intro-slider .swiper-dots',
                     clickable: true
@@ -464,6 +463,8 @@ export default {
             },
             carouselSetting2: {
                 ...carouselSettingDefault,
+                loop: true,
+                autoplay:{ delay: 1000, disableOnInteraction: true },
                 slidesPerView: 5,
                 spaceBetween: 10,
                 breakpoints: {

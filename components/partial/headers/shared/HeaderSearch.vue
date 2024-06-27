@@ -22,7 +22,7 @@
                     class="form-control"
                     name="q"
                     id="q"
-                    placeholder="Search product ..."
+                    :placeholder="$t('search_products')"
                     required
                     v-model="searchTerm"
                     @input="searchProducts"

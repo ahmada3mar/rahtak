@@ -10,12 +10,8 @@
                         </button>
 
                         <nuxt-link :to='localePath("/")' class="logo">
-                            <img
-                                v-lazy="'./images/home/logo.png'"
-                                alt="rahtak Logo"
-                                height="45"
-                                style="height: 45px; border-radius: 5px !important;"
-                            />
+                            <img v-lazy="'./images/home/logo.png'" alt="rahtak Logo" height="45"
+                                style="height: 45px; border-radius: 5px !important;" />
                         </nuxt-link>
                     </div>
 
@@ -27,7 +23,22 @@
                         <header-search></header-search>
                         <wishlist-menu></wishlist-menu>
                         <cart-menu></cart-menu>
-                        <nuxt-link class="mx-2" :to="switchLocalePath('ar')">AR</nuxt-link>
+                        <ul class="menu">
+                            <li class="">
+                                <nuxt-link :to="switchLocalePath($i18n.locale == 'ar' ? 'en' : 'ar')"
+                                    class="sf-with-ul link-active">
+                                    <div :class="`d-flex align-items-center`">
+                                        <strong class="sf-with-ul text-primary link-active">{{ $i18n.locale == 'ar' ?
+                                            'English' :'عربي' }}</strong>
+                                        <img height="20" class="mx-3"
+                                            v-lazy="$i18n.locale == 'ar' ? './images/uk.png' : './images/ar.png'"
+                                            alt="">
+                                    </div>
+                                </nuxt-link>
+                            </li>
+                        </ul>
+
+
                     </div>
                 </div>
             </div>
@@ -51,19 +62,19 @@ export default {
         StickyHeader
     },
     computed: {
-        isFullwidth: function() {
+        isFullwidth: function () {
             return this.$route.path.includes('fullwidth');
         }
     },
     methods: {
-        openSignInModal: function() {
+        openSignInModal: function () {
             this.$modal.show(
                 () => import('~/components/elements/modals/SignInModal'),
                 {},
                 { width: '575', height: 'auto', adaptive: true }
             );
         },
-        openMobileMenu: function() {
+        openMobileMenu: function () {
             document.querySelector('body').classList.add('mmenu-active');
         }
     }

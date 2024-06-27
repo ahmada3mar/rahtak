@@ -1,7 +1,7 @@
 <template>
     <footer class="footer footer-2">
         <div class="footer-middle" :class="{'border-0': $route.path=='/'}">
-            <div :class="isFullwidth ? 'container-fluid' : 'container'">
+            <div style="text-align: start;" :class="isFullwidth ? 'container-fluid' : 'container'">
                 <div class="row">
                     <div class="col-sm-12 col-lg-6">
                         <div class="widget widget-about">
@@ -10,26 +10,25 @@
                                 class="footer-logo bg-transparent"
                                 alt="Footer Logo"
                                 width="104"
-                                height="24"
+                                height="50"
                             />
-                            <p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
-
+                            <p>{{ $t("about_us_footer") }}</p>
                             <div class="widget-about-info">
                                 <div class="row">
                                     <div class="col-sm-6 col-md-4">
-                                        <span class="widget-about-title">Got Question? Call us 24/7</span>
-                                        <a href="tel:123456789">+0123 456 789</a>
+                                        <span class="widget-about-title">{{ $t("question_footer") }}</span>
+                                        <a href="tel:123456789"><bdi>079 999 1230</bdi></a>
                                     </div>
 
                                     <div class="col-sm-6 col-md-8">
-                                        <span class="widget-about-title">Payment Method</span>
+                                        <span class="widget-about-title">{{ $t("payment_methods") }}</span>
                                         <figure class="footer-payments">
                                             <img
                                                 v-lazy="'./images/payments.png'"
                                                 alt="Payment methods"
                                                 class="bg-transparent"
-                                                width="272"
-                                                height="20"
+                                                width="280"
+                                                height="25"
                                             />
                                         </figure>
                                     </div>
@@ -40,23 +39,23 @@
 
                     <div class="col-sm-4 col-lg-2">
                         <div class="widget">
-                            <h4 class="widget-title">Information</h4>
+                            <h4 class="widget-title">{{ $t("info") }}</h4>
 
                             <ul class="widget-list">
                                 <li>
-                                    <nuxt-link :to='localePath("/pages/about")'>About Molla</nuxt-link>
+                                    <nuxt-link :to='localePath("/pages/about")'>{{ $t("about_rahtak") }}</nuxt-link>
                                 </li>
                                 <li>
-                                    <a href="#">How to shop on Molla</a>
+                                    <a href="#">{{ $t("how_to_shop") }}</a>
                                 </li>
                                 <li>
-                                    <a href="#">FAQ</a>
+                                    <a href="#">{{ $t("faq") }}</a>
                                 </li>
                                 <li>
-                                    <nuxt-link :to='localePath("/pages/contact")'>Contact us</nuxt-link>
+                                    <nuxt-link :to='localePath("/pages/contact")'>{{ $t("contact_us") }}</nuxt-link>
                                 </li>
                                 <li>
-                                    <nuxt-link :to='localePath("/pages/login")'>Log in</nuxt-link>
+                                    <nuxt-link :to='localePath("/pages/login")'>{{ $t("login") }}</nuxt-link>
                                 </li>
                             </ul>
                         </div>
@@ -64,26 +63,23 @@
 
                     <div class="col-sm-4 col-lg-2">
                         <div class="widget">
-                            <h4 class="widget-title">Customer Service</h4>
+                            <h4 class="widget-title">{{ $t("customer_service") }}</h4>
 
                             <ul class="widget-list">
                                 <li>
-                                    <a href="#">Payment Methods</a>
+                                    <a href="#">{{ $t("payment_methods") }}</a>
                                 </li>
                                 <li>
-                                    <a href="#">Money-back guarantee!</a>
+                                    <a href="#">{{ $t("redeem") }}</a>
                                 </li>
                                 <li>
-                                    <a href="#">Returns</a>
+                                    <a href="#">{{ $t("loyalty_point") }}</a>
                                 </li>
                                 <li>
-                                    <a href="#">Shipping</a>
+                                    <a href="#">{{ $t("terms") }}</a>
                                 </li>
                                 <li>
-                                    <a href="#">Terms and conditions</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
+                                    <a href="#">{{ $t("privacy") }}</a>
                                 </li>
                             </ul>
                         </div>
@@ -91,23 +87,23 @@
 
                     <div class="col-sm-4 col-lg-2">
                         <div class="widget">
-                            <h4 class="widget-title">My Account</h4>
+                            <h4 class="widget-title">{{ $t("my_account") }}</h4>
 
                             <ul class="widget-list">
                                 <li>
-                                    <a href="#">Sign In</a>
+                                    <a href="#">{{ $t("login") }}</a>
                                 </li>
                                 <li>
-                                    <nuxt-link :to='localePath("/shop/cart")'>View Cart</nuxt-link>
+                                    <nuxt-link :to='localePath("/shop/cart")'>{{ $t("view_cart") }}</nuxt-link>
                                 </li>
                                 <li>
-                                    <nuxt-link :to='localePath("/shop/wishlist")'>My Wishlist</nuxt-link>
+                                    <nuxt-link :to='localePath("/shop/wishlist")'>{{ $t("my_whitelist") }}</nuxt-link>
                                 </li>
                                 <li>
-                                    <nuxt-link :to='localePath("/shop/dashboard")'>Track My Order</nuxt-link>
+                                    <nuxt-link :to='localePath("/shop/dashboard")'>{{ $t("track_order") }}</nuxt-link>
                                 </li>
                                 <li>
-                                    <a href="#">Help</a>
+                                    <a href="#">{{ $t("help") }}</a>
                                 </li>
                             </ul>
                         </div>
@@ -122,17 +118,9 @@
                     class="footer-copyright"
                 >Copyright © {{ new Date().getFullYear() }} Molla Store. All Rights Reserved.</p>
 
-                <ul class="footer-menu">
-                    <li>
-                        <a href="#">Terms Of Use</a>
-                    </li>
-                    <li>
-                        <a href="#">Privacy Policy</a>
-                    </li>
-                </ul>
 
                 <div class="social-icons social-icons-color">
-                    <span class="social-label">Social Media</span>
+                    <span class="social-label">{{ $t("social_media") }}</span>
                     <a
                         href="#"
                         class="social-icon social-facebook"
