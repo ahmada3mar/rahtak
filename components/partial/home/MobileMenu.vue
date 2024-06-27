@@ -4,17 +4,22 @@
             <span class="mobile-menu-close" @click="hideMobileMenu">
                 <i class="icon-close"></i>
             </span>
+            <div class="d-flex justify-content-between mb-2" style="padding-left: 2rem; padding-right: 2rem">
+                <p class="text-white">{{ $t("change_lang") }}</p>
+                <nuxt-link :to="switchLocalePath($i18n.locale == 'ar' ? 'en' : 'ar')" class="sf-with-ul link-active">
+                    <div :class="`d-flex align-items-center`">
+                        <strong class="sf-with-ul text-primary link-active mx-3">{{ $i18n.locale == 'ar' ?
+                            'English' : 'عربي' }}</strong>
+                        <img height="20"
+                            v-lazy="$i18n.locale == 'ar' ? './images/uk.png' : './images/ar.png'" alt="">
+                    </div>
+                </nuxt-link>
+            </div>
+
             <form action="#" method="get" class="mobile-search" @submit.prevent="submitSearchForm">
                 <label for="mobile-search" class="sr-only">Search</label>
-                <input
-                    type="search"
-                    class="form-control"
-                    name="mobile-search"
-                    id="mobile-search"
-                    v-model="searchTerm"
-                    placeholder="Search product ..."
-                    required
-                />
+                <input type="search" class="form-control" name="mobile-search" id="mobile-search" v-model="searchTerm"
+                    placeholder="Search product ..." required />
                 <button class="btn btn-primary" type="submit">
                     <i class="icon-search"></i>
                 </button>
@@ -32,14 +37,10 @@
                                 <a href="https://d-themes.com/vue/molla/demo-2">02 - furniture store</a>
                             </li>
                             <li>
-                                <a
-                                    href="https://d-themes.com/vue/molla/demo-3"
-                                >03 - electronic store</a>
+                                <a href="https://d-themes.com/vue/molla/demo-3">03 - electronic store</a>
                             </li>
                             <li>
-                                <a
-                                    href="https://d-themes.com/vue/molla/demo-4"
-                                >04 - electronic store</a>
+                                <a href="https://d-themes.com/vue/molla/demo-4">04 - electronic store</a>
                             </li>
                             <li>
                                 <a href="https://d-themes.com/vue/molla/demo-5">05 - fashion store</a>
@@ -60,22 +61,16 @@
                                 <a href="https://d-themes.com/vue/molla/demo-10">10 - shoes store</a>
                             </li>
                             <li>
-                                <a
-                                    href="https://d-themes.com/vue/molla/demo-11"
-                                >11 - furniture simple store</a>
+                                <a href="https://d-themes.com/vue/molla/demo-11">11 - furniture simple store</a>
                             </li>
                             <li>
-                                <a
-                                    href="https://d-themes.com/vue/molla/demo-12"
-                                >12 - fashion simple store</a>
+                                <a href="https://d-themes.com/vue/molla/demo-12">12 - fashion simple store</a>
                             </li>
                             <li>
                                 <a href="https://d-themes.com/vue/molla/demo-13">13 - market</a>
                             </li>
                             <li>
-                                <a
-                                    href="https://d-themes.com/vue/molla/demo-14"
-                                >14 - market fullwidth</a>
+                                <a href="https://d-themes.com/vue/molla/demo-14">14 - market fullwidth</a>
                             </li>
                             <li>
                                 <a href="https://d-themes.com/vue/molla/demo-15">15 - lookbook 1</a>
@@ -87,9 +82,7 @@
                                 <a href="https://d-themes.com/vue/molla/demo-17">17 - fashion store</a>
                             </li>
                             <li>
-                                <a
-                                    href="https://d-themes.com/vue/molla/demo-18"
-                                >18 - fashion store (with sidebar)</a>
+                                <a href="https://d-themes.com/vue/molla/demo-18">18 - fashion store (with sidebar)</a>
                             </li>
                             <li>
                                 <a href="https://d-themes.com/vue/molla/demo-19">19 - games store</a>
@@ -104,14 +97,10 @@
                                 <a href="https://d-themes.com/vue/molla/demo-22">22 - tools store</a>
                             </li>
                             <li>
-                                <a
-                                    href="https://d-themes.com/vue/molla/demo-23"
-                                >23 - fashion left navigation store</a>
+                                <a href="https://d-themes.com/vue/molla/demo-23">23 - fashion left navigation store</a>
                             </li>
                             <li>
-                                <a
-                                    href="https://d-themes.com/vue/molla/demo-24"
-                                >24 - extreme sport store</a>
+                                <a href="https://d-themes.com/vue/molla/demo-24">24 - extreme sport store</a>
                             </li>
                             <li>
                                 <a href="https://d-themes.com/vue/molla/demo-25">25 - jewelry store</a>
@@ -123,17 +112,13 @@
                                 <a href="https://d-themes.com/vue/molla/demo-28">27 - fashion store</a>
                             </li>
                             <li>
-                                <a
-                                    href="https://d-themes.com/vue/molla/demo-29"
-                                >28 - food market store</a>
+                                <a href="https://d-themes.com/vue/molla/demo-29">28 - food market store</a>
                             </li>
                             <li>
                                 <a href="https://d-themes.com/vue/molla/demo-30">29 - t-shirts store</a>
                             </li>
                             <li>
-                                <a
-                                    href="https://d-themes.com/vue/molla/demo-31"
-                                >30 - headphones store</a>
+                                <a href="https://d-themes.com/vue/molla/demo-31">30 - headphones store</a>
                             </li>
                             <li>
                                 <a href="https://d-themes.com/vue/molla/demo-32">31 - yoga store</a>
@@ -164,7 +149,8 @@
                                 </nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link :to='localePath("/shop/nosidebar/fullwidth")'>Shop Fullwidth No Sidebar</nuxt-link>
+                                <nuxt-link :to='localePath("/shop/nosidebar/fullwidth")'>Shop Fullwidth No
+                                    Sidebar</nuxt-link>
                             </li>
                             <li>
                                 <nuxt-link :to='localePath("/shop/category/boxed")'>Product Category Boxed</nuxt-link>
@@ -192,25 +178,19 @@
                         </ul>
                     </li>
                     <li>
-                        <nuxt-link
-                            to="/product/default/dark-yellow-lace-cut-out-swing-dress"
-                            class="sf-with-ul"
-                        >Product</nuxt-link>
+                        <nuxt-link to="/product/default/dark-yellow-lace-cut-out-swing-dress"
+                            class="sf-with-ul">Product</nuxt-link>
                         <ul>
                             <li>
                                 <nuxt-link
-                                    to="/product/default/dark-yellow-lace-cut-out-swing-dress"
-                                >Default</nuxt-link>
+                                    to="/product/default/dark-yellow-lace-cut-out-swing-dress">Default</nuxt-link>
                             </li>
                             <li>
                                 <nuxt-link
-                                    to="/product/centered/beige-ring-handle-circle-cross-body-bag"
-                                >Centered</nuxt-link>
+                                    to="/product/centered/beige-ring-handle-circle-cross-body-bag">Centered</nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link
-                                    to="/product/extended/yellow-tie-strap-block-heel-sandals"
-                                >
+                                <nuxt-link to="/product/extended/yellow-tie-strap-block-heel-sandals">
                                     <span>
                                         Extended Info
                                         <span class="tip tip-new">New</span>
@@ -218,27 +198,23 @@
                                 </nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link :to='localePath("/product/gallery/beige-metal-hoop-tote-bag")'>Gallery</nuxt-link>
+                                <nuxt-link
+                                    :to='localePath("/product/gallery/beige-metal-hoop-tote-bag")'>Gallery</nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link
-                                    to="/product/sticky/brown-faux-fur-longline-coat"
-                                >Sticky Info</nuxt-link>
+                                <nuxt-link to="/product/sticky/brown-faux-fur-longline-coat">Sticky Info</nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link
-                                    to="/product/sidebar/beige-v-neck-button-cardigan"
-                                >Boxed With Sidebar</nuxt-link>
+                                <nuxt-link to="/product/sidebar/beige-v-neck-button-cardigan">Boxed With
+                                    Sidebar</nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link
-                                    to="/product/fullwidth/black-faux-leather-chain-trim-sandals"
-                                >Full Width</nuxt-link>
+                                <nuxt-link to="/product/fullwidth/black-faux-leather-chain-trim-sandals">Full
+                                    Width</nuxt-link>
                             </li>
                             <li>
-                                <nuxt-link
-                                    to="/product/masonry/black-denim-dungaree-dress"
-                                >Masonry Sticky Info</nuxt-link>
+                                <nuxt-link to="/product/masonry/black-denim-dungaree-dress">Masonry Sticky
+                                    Info</nuxt-link>
                             </li>
                         </ul>
                     </li>
@@ -313,13 +289,16 @@
                                 <nuxt-link :to='localePath("/blog/masonry/masonry-2")'>Masonry</nuxt-link>
                                 <ul>
                                     <li>
-                                        <nuxt-link :to='localePath("/blog/masonry/masonry-2")'>Masonry 2 columns</nuxt-link>
+                                        <nuxt-link :to='localePath("/blog/masonry/masonry-2")'>Masonry 2
+                                            columns</nuxt-link>
                                     </li>
                                     <li>
-                                        <nuxt-link :to='localePath("/blog/masonry/masonry-3")'>Masonry 3 columns</nuxt-link>
+                                        <nuxt-link :to='localePath("/blog/masonry/masonry-3")'>Masonry 3
+                                            columns</nuxt-link>
                                     </li>
                                     <li>
-                                        <nuxt-link :to='localePath("/blog/masonry/masonry-4")'>Masonry 4 columns</nuxt-link>
+                                        <nuxt-link :to='localePath("/blog/masonry/masonry-4")'>Masonry 4
+                                            columns</nuxt-link>
                                     </li>
                                     <li>
                                         <nuxt-link :to='localePath("/blog/masonry-sidebar")'>Masonry sidebar</nuxt-link>
@@ -338,24 +317,19 @@
                                 </ul>
                             </li>
                             <li>
-                                <nuxt-link
-                                    to="/blog/single/default/cras-ornare-tristique-elit."
-                                >Single Post</nuxt-link>
+                                <nuxt-link to="/blog/single/default/cras-ornare-tristique-elit.">Single Post</nuxt-link>
                                 <ul>
                                     <li>
-                                        <nuxt-link
-                                            to="/blog/single/default/cras-ornare-tristique-elit."
-                                        >Default with sidebar</nuxt-link>
+                                        <nuxt-link to="/blog/single/default/cras-ornare-tristique-elit.">Default with
+                                            sidebar</nuxt-link>
                                     </li>
                                     <li>
-                                        <nuxt-link
-                                            to="/blog/single/fullwidth/fusce-pellentesque-suscipit."
-                                        >Fullwidth no sidebar</nuxt-link>
+                                        <nuxt-link to="/blog/single/fullwidth/fusce-pellentesque-suscipit.">Fullwidth no
+                                            sidebar</nuxt-link>
                                     </li>
                                     <li>
-                                        <nuxt-link
-                                            to="/blog/single/sidebar/utaliquam-sollicitzdvudin-leo."
-                                        >Fullwidth with sidebar</nuxt-link>
+                                        <nuxt-link to="/blog/single/sidebar/utaliquam-sollicitzdvudin-leo.">Fullwidth
+                                            with sidebar</nuxt-link>
                                     </li>
                                 </ul>
                             </li>
@@ -433,19 +407,19 @@ import Tabs from '~/components/elements/Tabs';
 import { mobileMenu } from '~/utilities/common.js';
 
 export default {
-    data: function() {
+    data: function () {
         return {
             searchTerm: ''
         };
     },
-    mounted: function() {
+    mounted: function () {
         mobileMenu();
     },
     methods: {
-        hideMobileMenu: function() {
+        hideMobileMenu: function () {
             document.querySelector('body').classList.remove('mmenu-active');
         },
-        submitSearchForm: function() {
+        submitSearchForm: function () {
             this.hideMobileMenu();
             this.$router.push({
                 path: '/shop/sidebar/3cols',

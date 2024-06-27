@@ -9,7 +9,7 @@
                             <i class="icon-bars"></i>
                         </button>
 
-                        <nuxt-link :to='localePath("/")' class="logo">
+                        <nuxt-link :to='localePath("/")' class="logo mx-4">
                             <img v-lazy="'./images/home/logo.png'" alt="rahtak Logo" height="45"
                                 style="height: 45px; border-radius: 5px !important;" />
                         </nuxt-link>
@@ -23,7 +23,7 @@
                         <header-search></header-search>
                         <wishlist-menu></wishlist-menu>
                         <cart-menu></cart-menu>
-                        <ul class="menu">
+                        <ul class="menu ar-bar">
                             <li class="">
                                 <nuxt-link :to="switchLocalePath($i18n.locale == 'ar' ? 'en' : 'ar')"
                                     class="sf-with-ul link-active">

@@ -1,8 +1,10 @@
 <template>
     <div class="dropdown cart-dropdown">
         <nuxt-link :to='localePath("/shop/cart")' class="dropdown-toggle">
-            <i class="icon-shopping-cart"></i>
-            <span class="cart-count">{{ qtyTotal }}</span>
+            <div class="d-flex" style="position: relative;">
+                <i class="icon-shopping-cart"></i>
+                <span class="cart-count">{{ qtyTotal }}</span>
+                </div>
             <span class="cart-txt">$ {{ priceTotal.toFixed(2) }}</span>
         </nuxt-link>
 

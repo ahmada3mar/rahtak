@@ -6,7 +6,18 @@ body {
         overflow-x: hidden !important;
     }
 
+
+}
+
+
+body.ltr {
     &.mmenu-active .page-wrapper {
         transform: translate(200px);
+    }
+}
+
+body.rtl {
+    &.mmenu-active .page-wrapper {
+        transform: translate(-200px);
     }
 }

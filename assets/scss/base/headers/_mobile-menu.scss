@@ -1,7 +1,16 @@
 /* Mobile Menu */
+
+.mobile-menu-container:dir(rtl) {
+	right: -280px !important;
+	left: unset !important;
+}
+.mobile-menu-container:dir(ltr) {
+	left: -280px !important;
+	right: unset !important;
+}
+
 .mobile-menu-container {
 	position: fixed;
-	left: -280px;
 	top: 0;
 	bottom: 0;
 	z-index: 1001;
@@ -18,7 +27,12 @@
 
 	.mmenu-active & {
 		visibility: visible;
-		transform: translateX(280px);
+	}
+	.mmenu-active.rtl & {
+		transform: translateX(-280px) !important;
+	}
+	.mmenu-active.ltr & {
+		transform: translateX(280px) !important;
 	}
 
 	.social-icons {
@@ -35,7 +49,7 @@
 		color: rgba(255, 255, 255, .45);
 		border-color: rgba(255, 255, 255, .45);
 
-		& + .social-icon {
+		&+.social-icon {
 			margin-left: .8rem;
 		}
 
@@ -49,6 +63,11 @@
 		background-color: transparent !important;
 	}
 }
+
+
+
+
+
 
 .mobile-menu-wrapper {
 	position: relative;
@@ -104,10 +123,11 @@
 
 .mobile-menu {
 	margin: 0;
-	padding:0;
+	padding: 0;
 	list-style: none;
-	> li {
-		> a {
+
+	>li {
+		>a {
 			text-transform: uppercase;
 		}
 	}
@@ -119,7 +139,7 @@
 		a {
 			position: relative;
 			display: block;
-			padding: 1rem 4.5rem 1rem 2rem;
+			padding: 1rem 2rem 1rem 2rem;
 			color: #fff;
 			border-bottom: .1rem solid rgba(255, 255, 255, .08);
 
@@ -130,10 +150,10 @@
 				outline: none !important;
 			}
 		}
-		
+
 		&.open,
 		&.active {
-			> a {
+			>a {
 				color: $primary-color;
 			}
 		}
@@ -164,6 +184,7 @@
 
 			ul {
 				border-top: .1rem solid rgba(255, 255, 255, .08);
+
 				li a {
 					padding-left: 5rem;
 				}
@@ -171,8 +192,8 @@
 		}
 	}
 
-	> li {
-		> a {
+	>li {
+		>a {
 			text-transform: uppercase;
 		}
 	}
@@ -202,7 +223,7 @@
 	margin-top: -1.5rem;
 	border-radius: 0;
 	background-color: transparent;
-	cursor:pointer;
+	cursor: pointer;
 	outline: none;
 	transition: color 0.35s;
 
@@ -217,7 +238,7 @@
 		color: $primary-color;
 	}
 
-	.open > a > &::after {
+	.open>a>&::after {
 		content: '\e802';
 	}
 }
@@ -265,7 +286,7 @@
 		border: none;
 
 		.mobile-nav,
-		.mobile-cats-nav  {
+		.mobile-cats-nav {
 			margin-bottom: 0;
 		}
 	}
@@ -305,8 +326,7 @@
 
 		&.active,
 		&:hover,
-		&:focus
-		{
+		&:focus {
 			color: $primary-color;
 			border-bottom-color: $primary-color !important;
 		}
@@ -314,7 +334,7 @@
 }
 
 .mobile-cats-nav {
-	.mobile-menu > li > a {
+	.mobile-menu>li>a {
 		text-transform: capitalize;
 	}
 }

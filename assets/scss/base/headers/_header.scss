@@ -894,15 +894,13 @@
 	justify-content: center;
 	cursor: pointer;
 	//margin-left: 1rem;
-	margin-right: 1rem;
+	margin: -45rem;
 	min-width: 3.3rem;
 }
 
 .header-bottom {
 	.mobile-menu-toggler {
-		margin-top: .55rem;
-		margin-bottom: .55rem;
-		margin-left: -.4rem;
+		margin: -0.45rem;
 	}
 }
 
@@ -1489,10 +1487,22 @@
 			display: none;
 		}
 	}
+	.dropdown-toggle{
+		flex-direction: row-reverse !important;
+	}
+
+	.header-right{
+		margin-left: 10px !important;
+		}
+		
+		.cart-dropdown{
+		padding-left: 10px !important;
+	}
 
 	.compare-dropdown,
+	.ar-bar,
 	.wishlist-link {
-		display: none;
+		display: none !important;
 	}
 
 	.cart-dropdown {
