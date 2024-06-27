@@ -8,7 +8,7 @@
                 <nuxt-link
                     :to="localePath('/shop/sidebar/4cols')"
                     class="sf-with-ul"
-                    >Shop</nuxt-link>
+                    >{{ $t("shop") }}</nuxt-link>
             </li>
             <li :class="current == 'market' ? 'active' : '' ">
                 <nuxt-link :to="localePath('/shop/market')" >{{ $t("catagories") }}</nuxt-link>

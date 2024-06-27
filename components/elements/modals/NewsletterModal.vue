@@ -51,7 +51,7 @@
                     </div>
                     <div class="col-xl-2-5col col-lg-5">
                         <img
-                            src="https://thumbs.dreamstime.com/b/email-message-sending-concept-isometric-paper-plane-mailing-banner-modern-vector-illustration-187262370.jpg"
+                            src="~/static/images/popup/newsletter/sub.webp"
                             width="396"
                             height="420"
                             class="newsletter-img"
