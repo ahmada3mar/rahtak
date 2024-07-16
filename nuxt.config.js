@@ -143,7 +143,7 @@ export default {
       },
 
     router: {
-        base: '/rahtak',
+        base: '/',
         linkActiveClass: 'link-active',
         linkExactActiveClass: 'active'
     },
