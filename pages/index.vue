@@ -37,22 +37,25 @@
                         <div class="swiper-slide">
                             <div
                                 class="intro-slide"
-                                :style="{ backgroundImage: `url(./images/home/sliders/slide-2.jpg)`}"
+                                :style="{ backgroundImage: `url(./images/image.png)`}"
                             >
-                                <div class="container intro-content text-right">
-                                    <h3 class="intro-subtitle">PREMIUM QUALITY</h3>
+                            <!--
+                                 <div class="container intro-content text-right">
+                                    <h3 class="intro-subtitle text-white">Transportation</h3>
 
-                                    <h1 class="intro-title">
-                                        coats
-                                        <span class="highlight">&</span>
-                                        <br />jackets
+                                    <h1 style="color: #ed008c;"class="intro-title">
+                                        Jenny
+                                        <span   class="text-dark">&</span>
+                                        <br />
+                                        <span style="color: darkblue">Petra ride</span>
                                     </h1>
 
                                     <nuxt-link :to='localePath("/shop/sidebar/list")' class="btn">
                                         <span> {{ $t("shop_now") }}</span>
                                         <i class="icon-long-arrow-right"></i>
-                                    </nuxt-link>
+                                    </nuxt-link> 
                                 </div>
+                                -->
                             </div>
                         </div>
                     </div>
@@ -215,6 +218,99 @@
         <special-collection :products="products" v-if="loaded"></special-collection>
 
         <div class="mb-3 mb-xl-2"></div>
+
+        <div class="trending">
+            <div style="opacity: 0.3;" class="sponsor"></div>
+            <a href="javascript:;">
+                <img
+                    :src="'./images/banners/maps.jpg'"
+                    width="1920"
+                    height="420"
+                    alt="Banner"
+                />
+            </a>
+            <div class="banner banner-big d-md-block">
+                <div style="max-width: 505px;" class="banner-content text-center">
+
+                <h3 class="banner-title text-white"> {{ $t("transportation_app") }}</h3>
+
+                 <h5 class="my-5 text-white"> {{ $t("recharge_balance") }}</h5>
+
+                    <nuxt-link :to='localePath("/shop/sidebar/4cols")' class="btn btn-primary-white">
+                        <span>{{ $t("shop_now") }}</span>
+                        <i class="icon-long-arrow-right"></i>
+                    </nuxt-link>
+                </div>
+            </div>
+        </div>
+
+        <div class="container new-arrivals">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="banner banner-overlay">
+                        <nuxt-link :to='localePath("/shop/sidebar/3cols?category=men")'>
+                            <img
+                                v-lazy="'./images/banners/jenny.jpg'"
+                                width="575"
+                                height="300"
+                                alt="Banner"
+                            />
+                        </nuxt-link>
+
+                        <div class="banner-content">
+                            <h4 class="banner-subtitle text-white">
+                                <a href="javascript:;"> {{ $t("dont_miss_shift") }}</a>
+                            </h4>
+
+                            <h3 class="banner-title text-primary">
+                                <a href="javascript:;">{{ $t("jenny") }}</a>
+                            </h3>
+
+                            <nuxt-link
+                                to="/shop/sidebar/3cols?category=men"
+                                class="btn btn-outline-white banner-link"
+                            >
+                                 {{ $t("shop_now") }}
+                                <i class="icon-long-arrow-right"></i>
+                            </nuxt-link>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="banner banner-overlay">
+                        <nuxt-link :to='localePath("/shop/sidebar/3cols?category=women")'>
+                            <img
+                            v-lazy="'./images/banners/petra.jpg'"
+                            width="575"
+                                height="300"
+                                alt="Banner"
+                            />
+                        </nuxt-link>
+
+                        <div class="banner-content">
+                            <h4 class="banner-subtitle text-white">
+                                <a href="javascript:;"> {{ $t("dont_miss_shift") }}</a>
+                            </h4>
+
+                            <h3 class="banner-title text-primary">
+                                <a href="javascript:;">{{ $t("petra_ride") }}</a>
+                            </h3>
+
+                            <nuxt-link
+                                to="/shop/sidebar/3cols?category=women"
+                                class="btn btn-outline-white banner-link"
+                            >
+                                 {{ $t("shop_now") }}
+                                <i class="icon-long-arrow-right"></i>
+                            </nuxt-link>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
 
         <div class="trending">
             <div class="sponsor"></div>
