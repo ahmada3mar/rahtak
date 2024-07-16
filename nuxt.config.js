@@ -147,7 +147,6 @@ export default {
         linkActiveClass: 'link-active',
         linkExactActiveClass: 'active'
     },
-    // serverMiddleware: ['~/server-middleware/index.js'],
 
     pageTransition: 'page',
 
