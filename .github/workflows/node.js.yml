@@ -2,10 +2,10 @@
 # .github/workflows/publish.yml
 name: Generate a build and push to another branch
 
-on:
-  push:
-    branches:
-      - master # Remove this line if your primary branch is "main"
+# on:
+#   push:
+#     branches:
+#       - master # Remove this line if your primary branch is "main"
 jobs:
   build:
     runs-on: ubuntu-latest
